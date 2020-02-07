@@ -21,4 +21,5 @@ Route::get('/api/show/time','User\UserController@showTime'); // 获取数据
 
 
 // 签名
-Route::get('/test/ check','TestController@md5');     //注册
+Route::get('/test/check','TestController@md5');     //注册
+Route::post('/test/check2','TestController@check2'); 	// 验证签名
