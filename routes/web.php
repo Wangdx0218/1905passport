@@ -27,3 +27,5 @@ Route::post('/test/check1','TestController@check1'); 	// 验证签名
 Route::get('/test/check2','TestController@Check2');    //密钥验签
 
 Route::get('/decrypt','TestController@decrypt');    //对称加密
+
+Route::get('/rsadescypt','TestController@rsadescypt'); //非对称解密
