@@ -86,7 +86,7 @@ class TestController extends Controller
     {
         $data = base64_decode($_GET['data']);
         $method = 'AES-256-CBC';
-        $key = 'zhang';
+        $key = 'wang';
         $iv = 'WUSD8796IDjhkchd';
 
         //解密
@@ -103,7 +103,7 @@ class TestController extends Controller
         $base64_decode_str = base64_decode($enc_data_str);
         echo '<hr>';
         //解密
-        $pub_key = file_get_contents(storage_path('keys/pubkey2'));
+        $pub_key = file_get_contents(storage_path('keys/app_pub'));
         openssl_public_decrypt($base64_decode_str,$dec_data,$pub_key);
         echo "解密数据：" . $dec_data;
     }
